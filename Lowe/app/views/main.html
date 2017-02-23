@@ -1,0 +1,33 @@
+<div class="hero-section">
+    <div class="hero" ng-model="hero">
+        <div class="left">
+            <div class="image">
+                <img src="{{hero.imageUrls.md}}" />
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="title">{{hero.brand}}&nbsp;{{hero.description}}<sup>&reg;</sup></div>
+            <ul class="marketing-bullets">
+                <li ng-repeat="bullet in hero.marketingBullets">
+                    {{bullet}}
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <a class="button" ng-click="addToCart(hero.networkPrice)">Add to Cart</a>
+            <div class="cost">&#36;&nbsp;{{hero.networkPrice}}</div>
+        </div>
+    </div>
+</div>
+
+<ul class="list-section">
+    <li ng-repeat="product in products track by $index">
+        <div class="image">
+            <img src="{{product.imageUrls.sm}}" />
+        </div>
+        <div class="title">{{product.brand}}&nbsp;{{product.description}}<sup>&reg;</sup></div>
+        <div class="cost">&#36;&nbsp;{{product.networkPrice}}</div>
+        <a class="button" ng-click="viewMore($index)">View More</a>
+    </li>
+</ul>

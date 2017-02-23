@@ -1,0 +1,150 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+body {
+    padding: 0;
+}
+
+
+/* Custom page header */
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+.button {
+    border: solid 2px grey;
+    padding: 15px;
+    width: 100%;
+    color: black;
+    background: lightgray;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* starting of css for product list page */
+
+.container {
+    max-width: 90% !important;
+    .hero-section {
+        border: solid 2px grey;
+        padding: 20px;
+        display: inline-block;
+        width: 96%;
+        margin-bottom: 20px;
+        .hero{
+            .left{
+                width: 20%;
+            }
+            img{
+                    max-width: 100%;
+            }
+            .details{
+                width: 54%;
+                display: inline-block;
+               
+                .marketing-bullets{
+                    width: 100%;
+                    text-align: left;
+                    font-size: 12px;
+                }
+            }
+            .right{
+                width: 25%;
+            }
+            .cost{
+                display: inline-block;
+                margin-top: 30px;
+                text-align: center;
+                width: 100%;
+            }
+            .title{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    ul.list-section {
+        list-style-type: none;
+        display: inline-block;
+        width: 100%;
+        padding-left: 0;
+        li {
+            border: solid 2px grey;
+            text-align: center;
+            padding: 20px;
+            width: 30%;
+            float: left;
+            margin-bottom: 20px;
+            margin-right: 3%;
+            height: 370px;
+            .title {
+                margin: 15px;
+            }
+            .cost {
+                margin: 20px 20px 30px 20px;
+            }
+        }
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+@media only screen and (max-width: 900px) {
+    ul.list-section li{
+        height: 400px !important;
+    }
+}
+/* end of css for product list page */
+@media only screen and (max-width: 709px) {
+    ul.list-section li{
+        min-width: 30% !important;
+        width: auto !important;
+    }
+
+    .hero img{
+        max-width: 100%;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        max-width: 730px;
+    }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
